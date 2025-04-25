@@ -810,6 +810,60 @@
 		</div>
 	</section> -->
 
+ <!-- Counter Section -->
+ <section class="counters py-5" style="background-color: #081427; text-align: center; color: white;">
+    <div class="container">
+      <div class="section-head-1 mb-5">
+        <h4 id="portfolio">Our Achievements at a Glance</h4>
+      </div>
+      <div class="row text-center">
+        <div class="col-6 col-md-3 mb-4">
+          <i class="far fa-clock fa-3x mb-2"></i>
+          <div class="counter h3" data-target="13500">0</div>
+          <h6>Working Hours</h6>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <i class="fas fa-gift fa-3x mb-2"></i>
+          <div class="counter h3" data-target="720">0</div>
+          <h6>Completed Projects</h6>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <i class="fas fa-users fa-3x mb-2"></i>
+          <div class="counter h3" data-target="480">0</div>
+          <h6>Happy Clients</h6>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <i class="fas fa-award fa-3x mb-2"></i>
+          <div class="counter h3" data-target="120">0</div>
+          <h6>Awards Received</h6>
+        </div>
+      </div>
+    </div>
+    <script>
+      const counters = document.querySelectorAll('.counter');
+      counters.forEach(counter => {
+        counter.innerText = '0';
+        const updateCounter = () => {
+          const target = +counter.getAttribute('data-target');
+          const current = +counter.innerText;
+          const increment = target / 200;
+          if (current < target) {
+            counter.innerText = `${Math.ceil(current + increment)}`;
+            setTimeout(updateCounter, 20);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateCounter();
+      });
+    </script>
+  </section>
+
+
+
+
+	
+
 	<footer style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0d1b3d; color: #ffffff; padding-top: 40px;">
 		<div id="contact">
 		  <div class="container">
@@ -818,7 +872,7 @@
 			  <div class="col-md-6">
 				<div id="contact-left">
 				  <h3 style="font-weight: bold;">Bigman Academics</h3>
-				  <p style="font-size: 15px;">We believe in <strong>Simple</strong>, <strong>Clean</strong> & <strong>Modern</strong> design standards with a responsive approach. Explore our reliable and effective academic support services.</p>
+				  <!-- <p style="font-size: 15px;">We believe in <strong>Simple</strong>, <strong>Clean</strong> & <strong>Modern</strong> design standards with a responsive approach. Explore our reliable and effective academic support services.</p> -->
 				  <div id="contact-info">
 					<address>
 					  <strong>Headquarters:</strong><br>
@@ -826,8 +880,8 @@
 					</address>
 					<div id="phone-fax-email">
 					  <p>
-						<strong>Phone:</strong> <span>(91) 9660887276</span><br>
-						<strong>Email:</strong> <span>support@bigmanacademics.com</span><br>
+						<strong>Phone:</strong> <span>8383843286482</span><br>
+						<strong>Email:</strong> <span>support@bigmanacademicservices.com</span><br>
 					  </p>
 					</div>
 				  </div>
